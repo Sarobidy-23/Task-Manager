@@ -1,10 +1,26 @@
+button{
+    cursor: pointer;
+    box-shadow: 1px 8px 14px;
+    transition: transform 500ms ease-out;
+    margin-left: 20px;
+}
+button:hover{
+    transform: scale(1.4);
+}
 .Item{
     cursor: pointer;
 }
 .task{
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
 }
+.addTask{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+}
+
 @media (max-width:400px){
     .task{
         flex-direction: column;

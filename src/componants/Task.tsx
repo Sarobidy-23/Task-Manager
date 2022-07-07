@@ -75,7 +75,8 @@ export default function Task(props:any) {
                            }  
            />
         <label className='label' htmlFor="status"> Status </label>
-          <select id='status'
+          <div>
+           <select id='status'
                   onChange={(e:ChangeEvent<HTMLSelectElement>) => {
                              setStatus(e.target.value)}
                            }
@@ -83,7 +84,8 @@ export default function Task(props:any) {
             <option value="TODO">TODO</option>  
             <option value="DOING">DOING</option>  
             <option value="DONE">DONE</option>  
-          </select>      
+          </select>    
+          </div>    
         <button className='close' onClick={() => {setToggle(false); setActionTask("add")}}>close</button>
         {actionTask==="add"? <button className='envoyer' onClick={()=>{addNewTask(title,description, status)}}>
                                   add task

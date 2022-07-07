@@ -28,14 +28,15 @@ function App() {
             setActionTask={setActionTask}
             updateInformation={updateInformation}
       />
-      <button onClick={() => {setToggle(!toggle)}}>New task</button>
+      <button className='addTask' onClick={() => {setToggle(!toggle)}}>New task</button>
       <div className='task'>
           <Container etiquette="TODO">
                {(todoList).map((todoItem:JSX.Element, index) => (
                  <div className="Item" key={todoItem.props.Title}
                       onClick={() => {setUpdateInformation({Title:todoItem.props.Title, 
                                                             Description:todoItem.props.Description,
-                                                            Status:todoItem.props.Status, Index:index});
+                                                            Status:todoItem.props.Status, 
+                                                            Index:index});
                                       setToggle(true);
                                       setActionTask("update");
                 }}>
@@ -48,7 +49,8 @@ function App() {
                   <div className="Item"  key={doingItem.props.Title}
                   onClick={() => {setUpdateInformation({Title:doingItem.props.Title, 
                                                         Description:doingItem.props.Description,
-                                                        Status:doingItem.props.Status, Index:index});
+                                                        Status:doingItem.props.Status, 
+                                                        Index:index});
                                   setToggle(true);
                                   setActionTask("update");
                   }}>
@@ -61,7 +63,8 @@ function App() {
                 <div className="Item"  key={doneItem.props.Title}
                 onClick={() => {setUpdateInformation({Title:doneItem.props.Title, 
                                                       Description:doneItem.props.Description,
-                                                      Status:doneItem.props.Status, Index:index});
+                                                      Status:doneItem.props.Status, 
+                                                      Index:index});
                                 setToggle(true);
                                 setActionTask("update");
                  }}>

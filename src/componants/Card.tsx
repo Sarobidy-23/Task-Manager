@@ -7,11 +7,11 @@ export default function Card(props:any):JSX.Element {
     <>
       <div className='card'>
         <h5>Title</h5>
-        <span>{Title}</span>
+        <span className='element'>{Title}</span>
         <h5>Description</h5>
-        <span>{Description}</span>
+        <span className='element'>{Description}</span>
         <h5>Status</h5>
-        <span>{Status}</span>
+        <span className='element'>{Status}</span>
       </div>
     </>
   );
