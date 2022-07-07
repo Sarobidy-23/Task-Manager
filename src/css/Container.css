@@ -1,0 +1,28 @@
+.container{
+    border: 2px solid black;
+    width: 30%;
+    height: 90vh;
+    margin: auto;
+    overflow: scroll;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+#etiquette{
+    font-weight: bold;
+    background:green;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    padding: 5px;
+    z-index: 2;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+@media (max-width:400px){
+    .container{
+        width: 85%;  
+    }
+}

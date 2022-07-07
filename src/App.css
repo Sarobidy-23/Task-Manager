@@ -1,0 +1,12 @@
+.Item{
+    cursor: pointer;
+}
+.task{
+    display: flex;
+    justify-content: flex-start;
+}
+@media (max-width:400px){
+    .task{
+        flex-direction: column;
+    }
+}
